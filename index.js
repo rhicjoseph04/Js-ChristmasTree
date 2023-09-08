@@ -10,9 +10,9 @@ var lightColors = ["#F00", "#0F0", "#00F"]; // Red, Green, Blue
 // Function to generate the Christmas tree content with blinking lights
 function generateTreeContent() {
     var treeContent = "<div style='font-family:monospace;text-align:center;color:" + lightColors[currentColorIndex] + "'>";
-    for (var i = 1; i <= 15; i++) {
+    for (var i = 1; i <= 25; i++) {
         for (var j = 1; j <= i; j++) {
-            treeContent += "<span class='blinking-light'>o</span>"; // Use "o" for blinking
+            treeContent += "<span class='blinking-light'>rj</span>"; // Use "o" for blinking
             treeContent += "<span>#</span>"; // Use "#" for non-blinking
         }
         treeContent += "<br>";
@@ -59,4 +59,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Media Query for Responsiveness
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+function handleMediaQueryChange(event) {
+    if (event.matches) {
+        // Apply responsive changes for screens <= 768px width
+        // For example, you can hide or modify certain elements
+    } else {
+        // Revert changes for screens > 768px width
+    }
+}
+
+mediaQuery.addListener(handleMediaQueryChange);
+handleMediaQueryChange(mediaQuery); // Call the function to handle initial state
 

@@ -1,3 +1,9 @@
+body {
+    background: linear-gradient(to bottom, #0d6930dd, #d32f2fdd);
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
 .nav-christmas {
     background: linear-gradient(to bottom, #0d6930dd, #d32f2fdd);
     font-family: 'Cursive', cursive; /* Apply a Christmas-themed font */
@@ -13,7 +19,6 @@
     position: relative;
     background-color: rgba(0, 0, 0, 0.807);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.982), rgba(0, 0, 0, 0.5)), url(https://i.ytimg.com/vi/neKCCIJcynI/maxresdefault.jpg);
-
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -42,28 +47,10 @@
     animation: blinker 0.5s linear infinite;
 }
 
-
-
 @keyframes blinker {
     50% {
         opacity: 0;
     }
-}
-
-
-
-@keyframes swirl {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Apply swirling animation to the tree content */
-#treeContent {
-    animation: swirl 20s linear infinite;
 }
 
 
@@ -84,15 +71,17 @@ audio {
    
 }
 
-/* Add hover effects to audio controls */
-audio:hover {
-    background: linear-gradient(to bottom, rgba(9, 99, 6, 0.982), rgba(0, 0, 0, 0.982));
-}
+/*footer*/
 
 .bg-christmas {
     background: linear-gradient(to bottom, #1a237e, #0d6930);
     color: white; /* Text color for Christmas */
     font-family: 'Cursive', cursive; /* Apply a Christmas-themed font */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; /* Add padding as needed */
 }
 
 
@@ -110,4 +99,9 @@ audio:hover {
 .btn-container {
     display: flex;
     justify-content: center;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    /* Add responsive styles here */
 }
